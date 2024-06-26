@@ -1,11 +1,30 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Navbar } from './components';
+import { CTASection, Company, Features, FooterSection, Hero, Testimonials } from './sections';
+
 export default function App() {
   return (
-    <>
-      <div className="h-screen bg-teal-500">
-        <h1 className="text-3xl text-center font-bold underline">
-          Hello world!
-        </h1>
-      </div>
-    </>
+    <main className="font-baseFont">
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Navbar/>
+                <section className='bg-skin-fill-primary pt-20'>
+                  <Hero/>
+                  <Company/>
+                  <Features/>
+                  <Testimonials/>
+                  <CTASection/>
+                  <FooterSection/>
+                </section>
+              </>
+            }
+          />
+        </Routes>
+      </Router>
+    </main>
   )
 }

@@ -1,3 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+        /* .....Text..... */
+
+        /* text-gray-900 */
+        --color-text-base: 17, 24, 39;
+
+        /* text-gray-500 */
+        --color-text-muted: 107, 114, 128;
+
+        /* text-gray-700 */
+        --color-text-muted2: 55, 65, 81;
+
+        /* text-white */
+        --color-text-inverted: 255, 255, 255;
+
+        /* text-blue-700 */
+        --color-text-inverted2: 29, 78, 216;
+
+        /* text-gray-500 */
+        --color-text-icon: 107, 114, 128;
+
+        /* text-gray-800 */
+        --color-text-icon-hover: 31, 41, 55;
+/* ****************************************************** */
+
+        /* .....Background..... */
+
+        /* bg-white */
+        --color-fill-primary: 255, 255, 255;        
+
+        /* bg-gray-200 */
+        --color-fill-secondary: 243, 244, 246;
+
+        /* bg-gray-100 */
+        --color-fill-tertiary: 229, 231, 235;
+
+        /* bg-blue-700 */
+        --color-fill-accent: 29, 78, 216;
+
+        /* bg-blue-800 */
+        --color-fill-accent-hover: 30, 64, 175;
+/* ****************************************************** */
+
+        /* .....Others..... */
+        /* ring-gray-200 */
+        --color-focus: 229, 231, 235;
+
+        /* ring-blue-300 */
+        --color-focus2: 147, 197, 253;
+
+
+        /* border-gray-300 */
+        --color-border: 209, 213, 219;
+
+        /* border-gray-100 */
+        --color-border2: 243, 244, 246;
+/* ****************************************************** */        
+    }
+
+
+    .dark {
+        /* .....Text..... */
+        /* text-white */
+        --color-text-base: 255, 255, 255;
+
+
+        /* text-gray-400 */
+        --color-text-muted: 156, 163, 175;
+
+        /* text-white */
+        --color-text-muted2: 255, 255, 255;
+
+
+        /* text-white */
+        --color-text-inverted: 255, 255, 255;
+
+
+        /* text-gray-400 */
+        --color-text-icon: 156, 163, 175;
+
+        /* text-gray-400 */
+        --color-text-icon-hover: 156, 163, 175;
+/* ****************************************************** */
+
+        /* .....Background..... */
+        /* bg-gray-900 */
+        --color-fill-primary: 17, 24, 39;
+
+        /* bg-gray-800 */
+        --color-fill-secondary: 31, 41, 55;
+
+        /* bg-gray-700 */
+        --color-fill-tertiary: 55, 65, 81;
+
+        /* bg-blue-700 */
+        --color-fill-accent: 29, 78, 216;
+
+        /* bg-blue-800 (what would be changing for other theme colors) */
+        --color-fill-accent-hover: 30, 64, 175;
+/* ****************************************************** */
+
+        /* .....Others..... */
+        /* ring-gray-700 */
+        --color-focus: 55, 65, 81;
+
+        /* ring-blue-900 */
+        --color-focus2: 30, 58, 138;
+
+
+        /* border-gray-700 */
+        --color-border: 55, 65, 81;
+        
+        /* border-gray-600 */
+        --color-border2: 75, 85, 99;
+/* ****************************************************** */        
+    }
+}
+
+@layer utilities {
+
+        .btn-menu {
+                @apply rounded-lg p-2 text-sm text-skin-icon hover:bg-skin-fill-tertiary
+                focus:outline-none focus:ring-1 focus:ring-skin-focus transition duration-500 ease-in-out
+        }
+}
