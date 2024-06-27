@@ -47,13 +47,15 @@ const Navbar = () => {
         {/* Logo */}
         <a href="/" className="flex items-center">
           <img src={creativaLogo} className="h-12 sm:h-16 mr-3" alt="Creativa Logo" />
-          <span className="text-xl font-semibold text-skin-base self-center whitespace-nowrap">Creativa-Two</span>
+          <span className="text-xl font-semibold text-skin-main self-center whitespace-nowrap">Creativa-2</span>
         </a>
 
         {/* ThemeSwitcher and Menu Btn */}
         <div className="flex justify-center items-center space-x-3 lg:order-2 ">
 
-          <LangSelector/>
+          <div className="hidden md:flex space-x-3">
+            <LangSelector/>
+          </div>
 
           <ThemeSwitcher/>
 

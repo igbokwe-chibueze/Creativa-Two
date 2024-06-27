@@ -21,13 +21,14 @@ const CustomBtn = ({
   };
 
   return (
+    // ${` text-base font-medium text-center text-skin-inverted ${textStyle} `} 
     <button
       className={`inline-flex items-center justify-center px-5 py-3 rounded-lg transition-colors duration-700 ease-in-out
         disabled:bg-[#81926D] disabled:opacity-90 disabled:cursor-not-allowed ${classProps}
-        ${backgroundStyle ? `${backgroundStyle}` : " bg-skin-fill-accent hover:bg-skin-fill-accent-hover "}
-        ${textStyle ? `${textStyle}` : " text-base font-medium text-center text-skin-inverted "} 
-        ${borderStyle ? `${borderStyle}` : " border border-skin-border  "} 
-        ${focusStyle ? `${focusStyle}` : " focus:ring-4 focus:ring-skin-focus2 "}
+        ${` bg-skin-fill-accent hover:bg-skin-fill-accent-hover ${backgroundStyle} `}
+        ${` text-base font-medium text-center text-skin-inverted ${textStyle} `}
+        ${` border border-skin-border ${borderStyle} `} 
+        ${` focus:ring-4 focus:ring-skin-focus2 ${focusStyle} `}
       `}
       type={btnType || "button"}
       onClick={handleClick}

@@ -1,82 +1,77 @@
-import { useEffect, useRef, useState } from "react";
-import { AngleRightIcon } from "../constants/Icons";
-import CustomBtn from "./CustomBtn";
-import { languages } from "../constants/Data";
+import PropTypes from 'prop-types';
 
-const LangSelector = () => {
-    // State to control the visibility of the dropdown
-    const [showDropdown, setShowDropdown] = useState(false);
-    // State to track the selected language
-    const [selectedLanguage, setSelectedLanguage] = useState('English');
+const CustomBtn = ({
+  classProps,
+  children,
+  label,
+  showLabelOnHover,
+  iconURL,
+  backgroundStyle,
+  textStyle,
+  borderStyle,
+  focusStyle,
+  btnType,
+  onBtnClick,
+  disabled,
+}) => {
+  const handleClick = () => {
+    if (onBtnClick && !disabled) {
+      onBtnClick();
+    }
+  };
 
-    // Ref to the div element to handle clicks outside the dropdown
-    const Ref = useRef(null);
+  return (
+    <button
+      className={`inline-flex items-center justify-center px-5 py-3 rounded-lg transition-colors duration-700 ease-in-out
+        disabled:bg-[#81926D] disabled:opacity-90 disabled:cursor-not-allowed ${classProps}
+        ${backgroundStyle ? `${backgroundStyle}` : " bg-skin-fill-accent hover:bg-skin-fill-accent-hover "}
+        ${textStyle ? `${textStyle}` : " text-base font-medium text-center text-skin-inverted "} 
+        ${borderStyle ? `${borderStyle}` : " border border-skin-border  "} 
+        ${focusStyle ? `${focusStyle}` : " focus:ring-4 focus:ring-skin-focus2 "}
+      `}
+      type={btnType || "button"}
+      onClick={handleClick}
+      disabled={disabled}
+    >
+      <p className={showLabelOnHover ? " hidden group-hover:flex  " : ""}>
+        {label || 'See More'}
+      </p>
 
-    // Function to toggle the visibility of the dropdown
-    const toggleDropdown = () => {
-        setShowDropdown(prevShowDropdown => !prevShowDropdown);
-    };
+      {/* Use the iconUrl if i want to use an svg icon */}
+      {iconURL && (
+        <img
+          src={iconURL}
+          alt='icon'
+          className=" ml-2 w-5 h-5 rounded-full bg-skin-fill-primary "
+        />
+      )}
+      
+      {/* Use this instead of iconUrl if i want to use a jsx icon component */}
+      {children}
+    </button>
+  );
+};
 
-    // Function to handle clicks outside the dropdown
-    const handleClickOutside = (event) => {
-        if (Ref.current && !Ref.current.contains(event.target)) {
-            setShowDropdown(false); // Hide the dropdown
-        }
-    };
+CustomBtn.propTypes = {
+  classProps: PropTypes.string,
+  children: PropTypes.node,
+  label: PropTypes.string,
+  showLabelOnHover: PropTypes.bool,
+  iconURL: PropTypes.string,
+  backgroundStyle: PropTypes.string,
+  textStyle: PropTypes.string,
+  borderStyle: PropTypes.string,
+  focusStyle: PropTypes.string,
+  btnType: PropTypes.oneOf(['button', 'submit', 'reset']),
+  onBtnClick: PropTypes.func,
+  disabled: PropTypes.bool,
+};
 
-    // Function to handle language selection
-    const handleLanguageSelect = (lang) => {
-        setSelectedLanguage(lang.value);
-        setShowDropdown(false);
-    };
+CustomBtn.defaultProps = {
+  classProps: '',
+  showLabelOnHover: false,
+  btnType: 'button',
+  disabled: false,
+};
 
-    // Use effect hook to add and clean up event listeners
-    useEffect(() => {
-        // Add event listener for clicks
-        document.addEventListener('click', handleClickOutside, true);
-        return () => {
-            // Remove event listener when the component is unmounted
-            document.removeEventListener('click', handleClickOutside, true);
-        };
-    }, []);
-
-    return (
-        <div className="relative" ref={Ref}>
-            <CustomBtn
-                btnType='button'
-                classProps={`group flex justify-center items-center space-x-2 w-32`}
-                label={selectedLanguage}
-                backgroundStyle={"hover:bg-skin-fill-tertiary"}
-                textStyle={"text-sm font-medium text-skin-muted"}
-                borderStyle={''}
-                focusStyle={''}
-                disabled={false}
-                onBtnClick={toggleDropdown}
-            >
-                <AngleRightIcon
-                    className={`transition-transform duration-700 ease-in-out ${showDropdown ? 'rotate-90' : 'rotate-0'}`}
-                />
-            </CustomBtn>
-
-            <div className={`absolute left-0 right-0 mt-2 ${showDropdown ? 'block' : 'hidden'}`}>
-                <div className="z-20 mt-6 p-2 w-fit bg-skin-fill-secondary border border-skin-border rounded-lg shadow-md">
-                    <ul>
-                        {languages.map((lang, index) => (
-                            <li key={index}
-                                className="py-2 pl-3 pr-4 font-medium text-skin-icon dark:hover:text-skin-inverted hover:text-skin-inverted2 
-                                rounded-md hover:bg-skin-fill-tertiary"
-                            >
-                                <button onClick={() => handleLanguageSelect(lang)} className="flex items-center space-x-2">
-                                    <div>({lang.flag})</div>
-                                    <div>{lang.value}</div>
-                                </button>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    );
-}
-
-export default LangSelector;
+export default CustomBtn;

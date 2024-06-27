@@ -24,7 +24,7 @@ export default {
       },
       textColor: {
         skin: {
-          base: withOpacity('--color-text-base'),
+          main: withOpacity('--color-text-main'),
           muted: withOpacity('--color-text-muted'),
           muted2: withOpacity('--color-text-muted2'),
           inverted: withOpacity('--color-text-inverted'),

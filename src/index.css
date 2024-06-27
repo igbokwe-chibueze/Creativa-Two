@@ -9,7 +9,7 @@
         /* .....Text..... */
 
         /* text-gray-900 */
-        --color-text-base: 17, 24, 39;
+        --color-text-main: 17, 24, 39;
 
         /* text-gray-500 */
         --color-text-muted: 107, 114, 128;
@@ -68,8 +68,7 @@
     .dark {
         /* .....Text..... */
         /* text-white */
-        --color-text-base: 255, 255, 255;
-
+        --color-text-main: 255, 255, 255;
 
         /* text-gray-400 */
         --color-text-muted: 156, 163, 175;
@@ -77,10 +76,8 @@
         /* text-white */
         --color-text-muted2: 255, 255, 255;
 
-
         /* text-white */
         --color-text-inverted: 255, 255, 255;
-
 
         /* text-gray-400 */
         --color-text-icon: 156, 163, 175;
@@ -128,5 +125,13 @@
         .btn-menu {
                 @apply rounded-lg p-2 text-sm text-skin-icon hover:bg-skin-fill-tertiary
                 focus:outline-none focus:ring-1 focus:ring-skin-focus transition duration-500 ease-in-out
+        }
+
+        .header-one {
+                @apply mb-4 text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-skin-main 
+        }
+
+        .paragraph-one {
+                @apply mb-6 lg:mb-8 text-lg lg:text-xl font-normal text-skin-muted 
         }
 }

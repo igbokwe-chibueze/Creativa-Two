@@ -1,15 +1,56 @@
+import { phoneMockup } from "../assets/pngs"
+import { CustomBtn } from "../components"
+import { ArrowRightIcon } from "../constants/Icons"
 
 const Hero = () => {
   return (
     <section id="hero" className=" min-h-screen ">
-        <div className=" max-w-screen-xl mx-auto text-center px-4 lg:px-12 py-8 lg:py-16 ">
+        <div className=" max-w-screen-xl mx-auto items-center px-4 lg:px-6 py-8 lg:py-16 lg:grid lg:grid-cols-12 ">
 
-            {/* Header */}
-            <h1 
-                className=" mb-4 text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-skin-base "
-            >
-                Hero
-            </h1>
+            {/* Column One */}
+            <div className=" lg:col-span-7 ">
+
+                {/* Header */}
+                <h1 className=" header-one ">
+                    Payments tool for software companies
+                </h1>
+
+                {/* SubHearder */}
+                <p className=" paragraph-one ">
+                    From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.
+                </p>
+
+                {/* Buttons */}
+                <div className="flex justify-start items-center space-x-4">
+
+                    <CustomBtn
+                        btnType='button'
+                        classProps={`group `}
+                        label={'Get Started'}
+                        textStyle={''}
+                        borderStyle={"border-0"}
+                        disabled={false}
+                    >
+                        <ArrowRightIcon className = " ml-2 group-hover:translate-x-2 transition-transform duration-700 ease-in-out "/>
+                    </CustomBtn>
+
+                    <CustomBtn
+                        btnType='button'
+                        classProps={`group `}
+                        label={'Speak to Sales'}
+                        backgroundStyle={"bg-transparent hover:bg-skin-fill-tertiary"}
+                        textStyle={'text-skin-main'}
+                        disabled={false}
+                    >
+                    </CustomBtn>
+                </div>
+            </div>
+
+            {/* Column One */}
+            <div className=" hidden lg:flex lg:col-span-5 ">
+                <img src={phoneMockup} alt="phoneMockup" />
+            </div>
+            
         </div>
     </section>
   )

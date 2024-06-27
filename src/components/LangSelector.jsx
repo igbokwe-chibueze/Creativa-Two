@@ -44,9 +44,9 @@ const LangSelector = () => {
         <div className="relative" ref={Ref}>
             <CustomBtn
                 btnType='button'
-                classProps={`group flex justify-center items-center space-x-2 w-32`}
+                classProps={"w-32"}
                 label={selectedLanguage}
-                backgroundStyle={"hover:bg-skin-fill-tertiary"}
+                backgroundStyle={"bg-transparent hover:bg-skin-fill-tertiary"}
                 textStyle={"text-sm font-medium text-skin-muted"}
                 borderStyle={''}
                 focusStyle={''}
@@ -54,7 +54,7 @@ const LangSelector = () => {
                 onBtnClick={toggleDropdown}
             >
                 <AngleRightIcon
-                    className={`transition-transform duration-700 ease-in-out ${showDropdown ? 'rotate-90' : 'rotate-0'}`}
+                    className={`ml-2 transition-transform duration-700 ease-in-out ${showDropdown ? 'rotate-90' : 'rotate-0'}`}
                 />
             </CustomBtn>
 
