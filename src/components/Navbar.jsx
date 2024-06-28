@@ -71,6 +71,10 @@ const Navbar = () => {
         <div className={`lg:flex justify-between items-center w-full mt-4 lg:mt-0 lg:w-auto lg:order-1 ${showNavLinks ? 'block' : 'hidden'}`}>
           
           <NavLinks data={navLinks} toggleNavLinks={toggleNavLinks}/>
+
+          <div className=" md:hidden space-x-3">
+            <LangSelector/>
+          </div>
         </div>
       </div>
     </nav>

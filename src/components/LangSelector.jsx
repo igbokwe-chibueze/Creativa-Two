@@ -44,12 +44,12 @@ const LangSelector = () => {
         <div className="relative" ref={Ref}>
             <CustomBtn
                 btnType='button'
-                classProps={"w-32"}
+                classProps={" md:w-32 px-[12px] "}
                 label={selectedLanguage}
                 backgroundStyle={"bg-transparent hover:bg-skin-fill-tertiary"}
-                textStyle={"text-sm font-medium text-skin-muted"}
-                borderStyle={''}
-                focusStyle={''}
+                textStyle={"font-medium text-skin-muted text-left"}
+                borderStyle={'border-0 sm:border'}
+                focusStyle={'focus:ring-0 md:focus:ring-4 focus:ring-skin-focus'}
                 disabled={false}
                 onBtnClick={toggleDropdown}
             >
@@ -58,22 +58,20 @@ const LangSelector = () => {
                 />
             </CustomBtn>
 
-            <div className={`absolute left-0 right-0 mt-2 ${showDropdown ? 'block' : 'hidden'}`}>
-                <div className="z-20 mt-6 p-2 w-fit bg-skin-fill-secondary border border-skin-border rounded-lg shadow-md">
-                    <ul>
-                        {languages.map((lang, index) => (
-                            <li key={index}
-                                className="py-2 pl-3 pr-4 font-medium text-skin-muted hover:text-skin-inverted2 dark:hover:text-skin-inverted 
-                                rounded-md hover:bg-skin-fill-tertiary"
-                            >
-                                <button onClick={() => handleLanguageSelect(lang)} className="flex items-center space-x-2">
-                                    <div>({lang.flag})</div>
-                                    <div>{lang.value}</div>
-                                </button>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+            <div className={`md:absolute md:left-0 md:right-0 md:mt-2 ${showDropdown ? 'block' : 'hidden'}`}>
+                <ul className="z-20 md:mt-6 p-2 w-full md:w-fit md:bg-skin-fill-secondary md:border md:border-skin-border md:rounded-md md:shadow-md">
+                    {languages.map((lang, index) => (
+                        <li key={index}
+                            className="py-2 pl-3 pr-4 font-medium text-skin-muted hover:text-skin-inverted2 dark:hover:text-skin-inverted 
+                            rounded-md hover:bg-skin-fill-tertiary"
+                        >
+                            <button onClick={() => handleLanguageSelect(lang)} className="flex items-center w-full space-x-2">
+                                <div>({lang.flag})</div>
+                                <div>{lang.value}</div>
+                            </button>
+                        </li>
+                    ))}
+                </ul>
             </div>
         </div>
     );

@@ -21,7 +21,7 @@ const Hero = () => {
                 </p>
 
                 {/* Buttons */}
-                <div className="flex justify-start items-center space-x-4">
+                <div className="flex flex-col min-[425px]:flex-row space-y-4 min-[425px]:space-y-0 min-[425px]:space-x-4">
 
                     <CustomBtn
                         btnType='button'
@@ -39,6 +39,7 @@ const Hero = () => {
                         classProps={`group `}
                         label={'Speak to Sales'}
                         backgroundStyle={"bg-transparent hover:bg-skin-fill-tertiary"}
+                        borderStyle={"focus:ring-skin-focus"}
                         textStyle={'text-skin-main'}
                         disabled={false}
                     >
