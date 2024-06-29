@@ -10,7 +10,7 @@ const Company = () => {
             </h1>
 
             {/* SubHearder */}
-            <p className=" paragraph-two ">
+            <p className=" paragraph-one-padded ">
               Meet your developers where they already are. GitHub is home to over 40 million developers and the world’s largest open source community.
             </p>
 

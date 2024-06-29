@@ -32,8 +32,8 @@
 
         /* .....Background..... */
 
-        /* bg-white */
-        --color-fill-primary: 255, 255, 255;        
+        /* bg-gray-50*/
+        --color-fill-primary: 249, 250, 251;        
 
         /* bg-gray-200 */
         --color-fill-secondary: 243, 244, 246;
@@ -131,11 +131,27 @@
                 @apply mb-4 text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-skin-main 
         }
 
+        .header-two {
+                @apply mb-4 text-4xl font-extrabold tracking-tight leading-none text-skin-main 
+        }
+
+        .header-three {
+                @apply mb-4 text-3xl font-extrabold tracking-tight leading-none text-skin-main 
+        }
+
+        .header-four {
+                @apply mb-4 text-2xl font-extrabold tracking-tight leading-none text-skin-main 
+        }
+
         .paragraph-one {
                 @apply mb-6 lg:mb-8 text-lg lg:text-xl font-normal text-skin-muted 
         }
 
-        .paragraph-two {
+        .paragraph-one-padded {
                 @apply mb-8 sm:px-16 xl:px-48 text-lg lg:text-xl font-normal text-skin-muted 
+        }
+
+        .paragraph-two {
+                @apply mb-6 lg:mb-8 text-lg font-normal text-skin-muted 
         }
 }
