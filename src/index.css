@@ -134,4 +134,8 @@
         .paragraph-one {
                 @apply mb-6 lg:mb-8 text-lg lg:text-xl font-normal text-skin-muted 
         }
+
+        .paragraph-two {
+                @apply mb-8 sm:px-16 xl:px-48 text-lg lg:text-xl font-normal text-skin-muted 
+        }
 }
