@@ -16,7 +16,7 @@ export default function App() {
                   <Hero/>
                   <Company/>
                   <Features/>
-                  <Testimonials/>
+                  {/* <Testimonials/> */}
                   <CTASection/>
                   <FooterSection/>
                 </section>

@@ -1,77 +1,112 @@
-import PropTypes from 'prop-types';
+import { useState } from "react";
+import { features } from "../constants/Data"
+import { AndroidIcon, AngleRightIcon, CheckMarkIcon, IOSIcon } from "../constants/Icons"
 
-const CustomBtn = ({
-  classProps,
-  children,
-  label,
-  showLabelOnHover,
-  iconURL,
-  backgroundStyle,
-  textStyle,
-  borderStyle,
-  focusStyle,
-  btnType,
-  onBtnClick,
-  disabled,
-}) => {
-  const handleClick = () => {
-    if (onBtnClick && !disabled) {
-      onBtnClick();
-    }
+
+const CTASection = () => {
+
+  const [visibleInfo, setVisibleInfo] = useState('iOS'); // Initial state set to 'iOS'
+
+  const handleIOSClick = () => {
+    setVisibleInfo('iOS');
+  };
+
+  const handleAndroidClick = () => {
+    setVisibleInfo('Android');
   };
 
   return (
-    <button
-      className={`inline-flex items-center justify-center px-5 py-3 rounded-lg transition-colors duration-700 ease-in-out
-        disabled:bg-[#81926D] disabled:opacity-90 disabled:cursor-not-allowed ${classProps}
-        ${backgroundStyle ? `${backgroundStyle}` : " bg-skin-fill-accent hover:bg-skin-fill-accent-hover "}
-        ${textStyle ? `${textStyle}` : " text-base font-medium text-center text-skin-inverted "} 
-        ${borderStyle ? `${borderStyle}` : " border border-skin-border  "} 
-        ${focusStyle ? `${focusStyle}` : " focus:ring-4 focus:ring-skin-focus2 "}
-      `}
-      type={btnType || "button"}
-      onClick={handleClick}
-      disabled={disabled}
-    >
-      <p className={showLabelOnHover ? " hidden group-hover:flex  " : ""}>
-        {label || 'See More'}
-      </p>
+    <section id="cta" className=" min-h-screen ">
+      <div className=" max-w-screen-xl mx-auto items-center px-4 lg:px-12 py-8 lg:py-16 lg:grid lg:grid-cols-2 ">
 
-      {/* Use the iconUrl if i want to use an svg icon */}
-      {iconURL && (
-        <img
-          src={iconURL}
-          alt='icon'
-          className=" ml-2 w-5 h-5 rounded-full bg-skin-fill-primary "
-        />
+        {/* Column One */}
+        <div>
+      <div className="flex justify-start items-center w-fit mb-2 space-x-8">
+        {/* iOS Button */}
+        <div className="flex flex-col items-center">
+          <button className="btn-toggle" onClick={handleIOSClick}>
+            <IOSIcon />
+          </button>
+          <p className="paragraph-two">iOS</p>
+        </div>  
+
+        {/* Android Button */}
+        <div className="flex flex-col items-center">
+          <button className="btn-toggle" onClick={handleAndroidClick}>
+            <AndroidIcon />
+          </button>
+          <p className="paragraph-two">Android</p>
+        </div>  
+      </div>
+
+      {/* iOS Information */}
+      {visibleInfo === 'iOS' && (
+        <div>
+          <div className="mb-4 border-b border-skin-border">
+            <h2 className="header-two">Creativa in iOS: Take control of your finances with us</h2>
+            <p className="paragraph-two">Our app helps users easily track their expenses and create a budget. With a user-friendly interface, the app allows users to quickly input their income and expenses, and then automatically categorizes them for easy tracking.</p>
+          </div>
+
+          {features.length > 0 && (
+            <div key={0}>
+              <ul className="mt-4 md:mt-6 paragraph-two space-y-4">
+                {features[0].items.map((item, idx) => (
+                  <li key={idx} className="flex justify-start items-center space-x-3">
+                    <CheckMarkIcon className={features[0].itemIconClass} />
+                    <p>{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <p className="paragraph-two">Flow Budget takes the hassle out of budgeting and empowers users to take control of their finances.</p>
+
+          <div className="flex justify-start items-center space-x-2 w-fit">
+            <a href="https://github.com/igbokwe-chibueze" className="flex justify-start items-center space-x-2 link">
+              <p>Check out the iOS app features</p>
+              <AngleRightIcon />
+            </a>
+          </div>
+        </div>
       )}
-      
-      {/* Use this instead of iconUrl if i want to use a jsx icon component */}
-      {children}
-    </button>
-  );
-};
 
-CustomBtn.propTypes = {
-  classProps: PropTypes.string,
-  children: PropTypes.node,
-  label: PropTypes.string,
-  showLabelOnHover: PropTypes.bool,
-  iconURL: PropTypes.string,
-  backgroundStyle: PropTypes.string,
-  textStyle: PropTypes.string,
-  borderStyle: PropTypes.string,
-  focusStyle: PropTypes.string,
-  btnType: PropTypes.oneOf(['button', 'submit', 'reset']),
-  onBtnClick: PropTypes.func,
-  disabled: PropTypes.bool,
-};
+      {/* Android Information */}
+      {visibleInfo === 'Android' && (
+        <div>
+          <div className="mb-4 border-b border-skin-border">
+            <h2 className="header-two">Creativa in Android: Take control of your finances with us</h2>
+            <p className="paragraph-two">Our app helps users easily track their expenses and create a budget. With a user-friendly interface, the app allows users to quickly input their income and expenses, and then automatically categorizes them for easy tracking.</p>
+          </div>
 
-CustomBtn.defaultProps = {
-  classProps: '',
-  showLabelOnHover: false,
-  btnType: 'button',
-  disabled: false,
-};
+          {features.length > 0 && (
+            <div key={1}>
+              <ul className="mt-4 md:mt-6 paragraph-two space-y-4">
+                {features[1].items.map((item, idx) => (
+                  <li key={idx} className="flex justify-start items-center space-x-3">
+                    <CheckMarkIcon className={features[1].itemIconClass} />
+                    <p>{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-export default CustomBtn;
+          <p className="paragraph-two">Creativa takes the hassle out of budgeting and empowers users to take control of their finances.</p>
+
+          <div className="flex justify-start items-center space-x-2 w-fit">
+            <a href="https://github.com/igbokwe-chibueze" className="flex justify-start items-center space-x-2 link">
+              <p>Check out the Android app features</p>
+              <AngleRightIcon />
+            </a>
+          </div>
+        </div>
+      )}
+    </div>
+
+      </div>
+    </section>
+  )
+}
+
+export default CTASection

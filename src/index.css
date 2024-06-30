@@ -79,11 +79,14 @@
         /* text-white */
         --color-text-inverted: 255, 255, 255;
 
+        /* text-blue-700 */
+        --color-text-inverted2: 29, 78, 216;
+
         /* text-gray-400 */
         --color-text-icon: 156, 163, 175;
 
-        /* text-gray-400 */
-        --color-text-icon-hover: 156, 163, 175;
+        /* text-gray-100 */
+        --color-text-icon-hover: 243, 244, 246;
 /* ****************************************************** */
 
         /* .....Background..... */
@@ -127,6 +130,11 @@
                 focus:outline-none focus:ring-1 focus:ring-skin-focus transition duration-500 ease-in-out
         }
 
+        .btn-toggle {
+                @apply flex justify-center items-center w-10 lg:w-16 h-10 lg:h-16 mb-2 rounded-lg
+                bg-skin-fill-secondary hover:bg-skin-fill-tertiary text-skin-icon hover:text-skin-icon-hover
+        }
+
         .header-one {
                 @apply mb-4 text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-skin-main 
         }
@@ -153,5 +161,9 @@
 
         .paragraph-two {
                 @apply mb-6 lg:mb-8 text-lg font-normal text-skin-muted 
+        }
+
+        .link {
+                @apply text-lg font-normal text-skin-inverted2 hover:underline 
         }
 }

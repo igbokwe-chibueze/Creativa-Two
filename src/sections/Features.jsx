@@ -14,97 +14,31 @@ const Features = () => {
 
               {/* SubHearder */}
               <p className=" paragraph-one ">
-                Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.
+                Here at Creativa we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.
               </p>
           </div>
 
-          <div className=" mt-6 grid grid-cols-3 gap-8">
+          <div className=" mt-6 space-y-12 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8">
 
-            {features.map((section, index) => (
+            {features.map((feature, index) => (
               <div key={index}>
                 <div
-                  className={`flex justify-center items-center w-10 lg:w-16 h-10 lg:h-16 mb-8 rounded ${section.iconBgClass} ${section.iconTextClass}`}
+                  className={`flex justify-center items-center w-10 lg:w-16 h-10 lg:h-16 mb-4 md:mb-8 rounded 
+                    ${feature.iconBgClass} ${feature.iconTextClass}`}
                 >
-                  {section.icon}
+                  {feature.icon}
                 </div>
-                <h4 className="header-four">{section.title}</h4>
-                <ul className="mt-6 paragraph-two space-y-4">
-                  {section.items.map((item, idx) => (
+                <h4 className="header-four">{feature.title}</h4>
+                <ul className="mt-4 md:mt-6 paragraph-two space-y-4">
+                  {feature.items.map((item, idx) => (
                     <li key={idx} className="flex justify-start items-center space-x-3">
-                      <CheckMarkIcon className={section.itemIconClass} />
+                      <CheckMarkIcon className={feature.itemIconClass} />
                       <p>{item}</p>
                     </li>
                   ))}
                 </ul>
               </div>
-            ))}
-            
-            {/* <div>
-              <div className="flex justify-center items-center w-10 lg:w-16 h-10 lg:h-16 mb-8 rounded 
-                bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 "
-              >
-                <PresentationIcon/>
-              </div>
-
-              <h4 className=" header-four ">Project Management</h4>
-
-              <ul className=" mt-6 paragraph-two space-y-4">
-                <li className="flex justify-start items-center space-x-3">
-                  <CheckMarkIcon className={"fill-blue-300 dark:fill-blue-900"}/>
-                  <p >Unified Contribution Graph</p>
-                </li>
-                <li className="flex justify-start items-center space-x-3">
-                  <CheckMarkIcon className={"fill-blue-300 dark:fill-blue-900"}/>
-                  <p >Org activity graph</p>
-                </li>
-                <li className="flex justify-start items-center space-x-3">
-                  <CheckMarkIcon className={"fill-blue-300 dark:fill-blue-900"}/>
-                  <p >Org dependency insights</p>
-                </li>
-                <li className="flex justify-start items-center space-x-3">
-                  <CheckMarkIcon className={"fill-blue-300 dark:fill-blue-900"}/>
-                  <p >Milestones</p>
-                </li>
-                <li className="flex justify-start items-center space-x-3">
-                  <CheckMarkIcon className={"fill-blue-300 dark:fill-blue-900"}/>
-                  <p >Repo insights</p>
-                </li>
-              </ul>
-            </div> */}
-
-            {/* <div>
-              <div className="flex justify-center items-center w-10 lg:w-16 h-10 lg:h-16 mb-8 rounded 
-                bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 "
-              >
-                <ScaleIcon/>
-              </div>
-
-              <h4 className=" header-four ">Collaborative Coding</h4>
-
-              <ul className=" mt-6 paragraph-two space-y-4">
-                <li className="flex justify-start items-center space-x-3">
-                  <CheckMarkIcon className={"fill-purple-300 dark:fill-purple-900"}/>
-                  <p >Dynamic reports and dashboards</p>
-                </li>
-                <li className="flex justify-start items-center space-x-3">
-                  <CheckMarkIcon className={"fill-purple-300 dark:fill-purple-900"}/>
-                  <p >Code review assignments</p>
-                </li>
-                <li className="flex justify-start items-center space-x-3">
-                  <CheckMarkIcon className={"fill-purple-300 dark:fill-purple-900"}/>
-                  <p >Team discussions</p>
-                </li>
-                <li className="flex justify-start items-center space-x-3">
-                  <CheckMarkIcon className={"fill-purple-300 dark:fill-purple-900"}/>
-                  <p >Protected branches</p>
-                </li>
-                <li className="flex justify-start items-center space-x-3">
-                  <CheckMarkIcon className={"fill-purple-300 dark:fill-purple-900"}/>
-                  <p >Draft pull requests</p>
-                </li>
-              </ul>
-            </div> */}
-            
+            ))}            
           </div>
 
 
