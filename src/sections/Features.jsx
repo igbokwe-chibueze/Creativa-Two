@@ -5,7 +5,7 @@ import { CheckMarkIcon } from "../constants/Icons"
 const Features = () => {
   return (
     <section id="features" className=" min-h-screen ">
-        <div className=" max-w-screen-xl mx-auto items-center px-4 lg:px-12 py-8 lg:py-16 ">
+        <div className=" max-w-screen-xl mx-auto px-4 lg:px-12 py-8 lg:py-16 ">
           <div className="max-w-screen-md mb-8 lg:mb-16">
               {/* Header */}
               <h2 className=" header-two ">
@@ -40,8 +40,6 @@ const Features = () => {
               </div>
             ))}            
           </div>
-
-
         </div>
     </section>
   )

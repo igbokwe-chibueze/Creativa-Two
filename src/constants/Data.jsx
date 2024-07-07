@@ -1,4 +1,4 @@
-import { BriefcaseIcon, PresentationIcon, ScaleIcon } from "./Icons";
+import { BriefcaseIcon, DribbleIcon, FacebookIcon, GithubIcon, InstagramIcon, PresentationIcon, ScaleIcon, TwitterIcon } from "./Icons";
 
 export const navLinks = [
     { href: 'hero', text: 'Hero' },
@@ -60,4 +60,37 @@ export const features = [
       itemIconClass: "fill-green-300 dark:fill-green-900",
     }
   ];
+
+  export const address = [
+    {
+      city: "Awka",
+      address1: "Agu Awka",
+      address2: "456 Enugu-Onitsha Expressway, Nigeria",
+      tel: "+234 (8) 123 4567 890",
+      email: "company@name.ng"
+    },
+    {
+      city: "Nairobi",
+      address1: "Westlands",
+      address2: "1234 Kenyatta Avenue, Kenya",
+      tel: "+254 (7) 123 4567 890",
+      email: "company@name.com"
+
+    },
+    {
+      city: "New York",
+      address1: "Huntersville",
+      address2: "957 Hill Suite 491, United States",
+      tel: "+1 (123) 456 7890 1234",
+      email: "company@name.com"
+    },
+  ]
+
+  export const socialMediaLinks = [
+    { icon: <FacebookIcon/>, url: "#" },
+    { icon: <InstagramIcon/>, url: "https://www.instagram.com/igbokwe_chibueze_o/" },
+    { icon: <TwitterIcon/>, url: "https://twitter.com/chisteeldomain" },
+    { icon: <GithubIcon/>, url: "https://github.com/igbokwe-chibueze" },
+    { icon: <DribbleIcon/>, url: "#" }
+];
   

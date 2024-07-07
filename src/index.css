@@ -160,10 +160,37 @@
         }
 
         .paragraph-two {
+                /* Paragraph not larger on larger screens */
                 @apply mb-6 lg:mb-8 text-lg font-normal text-skin-muted 
+        }
+
+        .paragraph-two-no-margin {
+                /* Paragraph not larger on larger screens */
+                @apply text-lg font-normal text-skin-muted 
         }
 
         .link {
                 @apply text-lg font-normal text-skin-inverted2 hover:underline 
+        }
+
+        .form-input {
+                @apply block w-full p-3 bg-skin-fill-secondary text-sm text-skin-muted
+                rounded-lg border border-skin-border
+                focus:ring-1 focus:outline-none focus:ring-skin-focus2
+                pl-10 
+        }
+
+        .form-btn {
+                @apply absolute end-1 bottom-1.5 px-4 py-2  
+                text-sm font-medium text-skin-inverted 
+                bg-skin-fill-accent hover:bg-skin-fill-accent-hover rounded-lg
+                focus:ring-4 focus:outline-none focus:ring-skin-focus2
+        }
+
+        .form-btn2 {
+                @apply absolute top-0 end-0 md:w-28 h-full 
+                text-sm font-medium text-skin-inverted 
+                bg-skin-fill-accent hover:bg-skin-fill-accent-hover rounded-e-lg
+                focus:ring-4 focus:outline-none focus:ring-skin-focus2
         }
 }

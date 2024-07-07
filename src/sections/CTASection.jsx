@@ -17,7 +17,7 @@ const CTASection = () => {
 
   return (
     <section id="cta" className="min-h-screen">
-      <div className="max-w-screen-xl mx-auto items-center px-4 lg:px-12 py-8 lg:py-16 space-y-14">
+      <div className="max-w-screen-xl mx-auto px-4 lg:px-12 py-8 lg:py-16 space-y-14">
 
         <div className="lg:grid lg:grid-cols-2 gap-16">
 
@@ -113,7 +113,6 @@ const CTASection = () => {
           </div>
         </div>
 
-
         <div className="lg:grid lg:grid-cols-2 gap-16">
 
           {/* Column One   */}
@@ -167,7 +166,7 @@ const CTASection = () => {
                   classProps={`group `}
                   label={'Speak to Sales'}
                   backgroundStyle={"bg-skin-fill-secondary hover:bg-skin-fill-tertiary"}
-                  borderStyle={"focus:ring-skin-focus"}
+                  focusStyle={"focus:ring-skin-focus"}
                   textStyle={'text-skin-main'}
                   disabled={false}
                 >
