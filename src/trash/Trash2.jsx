@@ -1,67 +1,135 @@
-/** @type {import('tailwindcss').Config} */
+import { blackman, blackwoman, blackwoman2, whiteman, whitewoman } from "../assets/pngs";
+import { BriefcaseIcon, DribbleIcon, FacebookIcon, GithubIcon, InstagramIcon, PresentationIcon, ScaleIcon, TwitterIcon } from "./Icons";
 
-function withOpacity(variableName) {
-    return ({ opacityValue }) => {
-      if (opacityValue !== undefined) {
-        return `rgba(var(${variableName}), ${opacityValue})`
-      }
-      return `rgb(var(${variableName}))`
-    }
-  }
-  
-  export default {
-    content: [
-      "./index.html",
-      "./src/**/*.{js,ts,jsx,tsx}",
-    ],
-  
-    darkMode: 'class',
-  
-    theme: {
-      extend: {
-        fontFamily: {
-          baseFont: ["Merriweather", 'serif'],
-        },
-        textColor: {
-          skin: {
-            base: withOpacity('--color-text-base'),
-            muted: withOpacity('--color-text-muted'),
-            muted2: withOpacity('--color-text-muted2'),
-            inverted: withOpacity('--color-text-inverted'),
-            inverted2: withOpacity('--color-text-inverted2'),
-            icon: withOpacity('--color-text-icon'),
-            'icon-hover': withOpacity('--color-text-icon-hover'),
-          },
-        },
-        backgroundColor: {
-          skin: {
-            fill: withOpacity('--color-fill'),
-            'fill-muted': withOpacity('--color-fill-muted'),
-            'fill-muted2': withOpacity('--color-fill-muted2'),
-            'fill-muted-hover': withOpacity('--color-fill-muted-hover'),
-            'button-accent': withOpacity('--color-button-accent'),
-            'button-accent-hover': withOpacity('--color-button-accent-hover'),
-            'button-muted-hover': withOpacity('--color-button-muted-hover'),
-          },
-        },
-        ringColor: {
-          skin: {
-            focus: withOpacity('--color-focus'),
-            focus2: withOpacity('--color-focus2'),
-          },
-        },
-        borderColor: {
-          skin: {
-            border: withOpacity('--color-border'),
-            border2: withOpacity('--color-border2'),
-          },
-        },
-        gradientColorStops: {
-          skin: {
-            hue: withOpacity('--color-fill'),
-          },
-        },
-      },
+export const navLinks = [
+    { href: 'hero', body: 'Hero' },
+    { href: 'company', body: 'Company' },
+    { href: 'features', body: 'Features' },
+    { href: 'testimonials', body: 'Testimonials' },
+    { href: 'cta', body: 'CTA' },
+    { href: 'footer', body: 'Footer' },
+];
+
+export const languages = [
+    { value: 'Igbo', flag: 'NG'},
+    { value: 'English', flag: 'US'},
+    { value: 'Chinese', flag: 'CN'},
+    { value: 'Spanish', flag: 'ES'},
+]
+
+export const features = [
+    {
+      icon: <PresentationIcon />,
+      iconBgClass: "bg-blue-100 dark:bg-blue-900",
+      iconTextClass: "text-blue-600 dark:text-blue-300",
+      title: "Project Management",
+      items: [
+        "Unified Contribution Graph",
+        "Org activity graph",
+        "Org dependency insights",
+        "Milestones",
+        "Repo insights",
+      ],
+      itemIconClass: "fill-blue-300 dark:fill-blue-900",
     },
-    plugins: [],
-  }
+    {
+      icon: <ScaleIcon />,
+      iconBgClass: "bg-purple-100 dark:bg-purple-900",
+      iconTextClass: "text-purple-600 dark:text-purple-300",
+      title: "Collaborative Coding",
+      items: [
+        "Dynamic reports and dashboards",
+        "Code review assignments",
+        "Team discussions",
+        "Protected branches",
+        "Draft pull requests",
+      ],
+      itemIconClass: "fill-purple-300 dark:fill-purple-900",
+    },
+    {
+      icon: <BriefcaseIcon />,
+      iconBgClass: "bg-green-100 dark:bg-green-900",
+      iconTextClass: "text-green-600 dark:text-green-300",
+      title: "Enterprise Security",
+      items: [
+        "Required reviews",
+        "Dependabot security and",
+        "Dependency graph",
+        "GitHub Advisory Database",
+        "GPG commit signing verification",
+      ],
+      itemIconClass: "fill-green-300 dark:fill-green-900",
+    }
+  ];
+
+  export const address = [
+    {
+      city: "Awka",
+      address1: "Agu Awka",
+      address2: "456 Enugu-Onitsha Expressway, Nigeria",
+      tel: "+234 (8) 123 4567 890",
+      email: "company@name.ng"
+    },
+    {
+      city: "Nairobi",
+      address1: "Westlands",
+      address2: "1234 Kenyatta Avenue, Kenya",
+      tel: "+254 (7) 123 4567 890",
+      email: "company@name.com"
+
+    },
+    {
+      city: "New York",
+      address1: "Huntersville",
+      address2: "957 Hill Suite 491, United States",
+      tel: "+1 (123) 456 7890 1234",
+      email: "company@name.com"
+    },
+  ]
+
+  export const socialMediaLinks = [
+    { icon: <FacebookIcon/>, url: "#" },
+    { icon: <InstagramIcon/>, url: "https://www.instagram.com/igbokwe_chibueze_o/" },
+    { icon: <TwitterIcon/>, url: "https://twitter.com/chisteeldomain" },
+    { icon: <GithubIcon/>, url: "https://github.com/igbokwe-chibueze" },
+    { icon: <DribbleIcon/>, url: "#" }
+];
+
+export const testimonialsData = [
+  {
+    subject:"1 It was a great experience!",
+    body: "Creativa has been a game-changer for our development process. The extensive library of predesigned components and pages, from simple forms to complex dashboards, has made building our SaaS applications faster and easier. ",
+    author: "1 Mwangi Njoroge",
+    position: "CEO at InnovateTech",
+    image: blackman,
+  },
+  {
+    subject:"2 Best product!",
+    body: "The versatility and ease of use of Creativa are unmatched. It has streamlined our development process, making it easier to create stunning applications quickly.",
+    author: "2 Sophia Carter",
+    position: "CTO at FutureSoft",
+    image: whitewoman,
+  },
+  {
+    subject:"3 Great design!",
+    body: "Creativa has revolutionized our approach to web design. The pre-built components are incredibly intuitive and save us so much time. Highly recommend for any development team.",
+    author: "3 Chioma Adesina",
+    position: "Lead Developer at WebWave",
+    image: blackwoman,
+  },
+  {
+    subject:"4 Just awesome!",
+    body: "We integrated Creativa into our workflow, and the results have been phenomenal. The templates are modern and fully customizable, making our projects stand out.",
+    author: "4 David Johnson",
+    position: "Product Manager at NexaWorks",
+    image: whiteman,
+  },
+  {
+    subject:"5 Fantastic!",
+    body: "Creativa offers an exceptional library of components that have significantly reduced our development time. It's a game-changer for our team's productivity.",
+    author: "5 Amina Okoro",
+    position: "Head of Development at CodeCrafters",
+    image: blackwoman2,
+  },
+];
+  

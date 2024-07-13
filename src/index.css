@@ -193,4 +193,35 @@
                 bg-skin-fill-accent hover:bg-skin-fill-accent-hover rounded-e-lg
                 focus:ring-4 focus:outline-none focus:ring-skin-focus2
         }
+
+        /* Testimonials Section */ 
+        .testimonial .slick-arrow.slick-prev,
+        .testimonial .slick-arrow.slick-next {
+                @apply hidden ;
+        }
+
+        .testimonial .slick-prev::before,
+        .testimonial .slick-next::before {
+                @apply hidden;
+        }
+
+        .testimonial .slick-slide > div {
+                @apply transition-transform duration-700 ease-in-out;
+        }
+
+        .testimonial-nav .slick-slide > div {
+                @apply p-2;
+        }
+
+        /* .testimonial .slick-slide > div {
+        @apply transform scale-75 transition-transform duration-700 ease-in-out;
+        }
+         */
+        /*** end testimonials section ***/
+
+        .btn-carousel {
+                @apply p-2 rounded border border-skin-border 
+                text-skin-main
+                hover:bg-skin-fill-tertiary transition-colors duration-700 ease-in-out
+        }
 }

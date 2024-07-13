@@ -1,3 +1,4 @@
+import { blackman, blackwoman, blackwoman2, whiteman, whitewoman } from "../assets/pngs";
 import { BriefcaseIcon, DribbleIcon, FacebookIcon, GithubIcon, InstagramIcon, PresentationIcon, ScaleIcon, TwitterIcon } from "./Icons";
 
 export const navLinks = [
@@ -92,5 +93,43 @@ export const features = [
     { icon: <TwitterIcon/>, url: "https://twitter.com/chisteeldomain" },
     { icon: <GithubIcon/>, url: "https://github.com/igbokwe-chibueze" },
     { icon: <DribbleIcon/>, url: "#" }
+];
+
+export const testimonialsData = [
+  {
+    subject:"1 It was a great experience!",
+    body: "Creativa has been a game-changer for our development process. The extensive library of predesigned components and pages, from simple forms to complex dashboards, has made building our SaaS applications faster and easier. ",
+    author: "1 Mwangi Njoroge",
+    position: "CEO at InnovateTech",
+    image: blackman,
+  },
+  {
+    subject:"2 Best product!",
+    body: "The versatility and ease of use of Creativa are unmatched. It has streamlined our development process, making it easier to create stunning applications quickly.",
+    author: "2 Sophia Carter",
+    position: "CTO at FutureSoft",
+    image: whitewoman,
+  },
+  {
+    subject:"3 Great design!",
+    body: "Creativa has revolutionized our approach to web design. The pre-built components are incredibly intuitive and save us so much time. Highly recommend for any development team.",
+    author: "3 Chioma Adesina",
+    position: "Lead Developer at WebWave",
+    image: blackwoman,
+  },
+  {
+    subject:"4 Just awesome!",
+    body: "We integrated Creativa into our workflow, and the results have been phenomenal. The templates are modern and fully customizable, making our projects stand out.",
+    author: "4 David Johnson",
+    position: "Product Manager at NexaWorks",
+    image: whiteman,
+  },
+  {
+    subject:"5 Fantastic!",
+    body: "Creativa offers an exceptional library of components that have significantly reduced our development time. It's a game-changer for our team's productivity.",
+    author: "5 Amina Okoro",
+    position: "Head of Development at CodeCrafters",
+    image: blackwoman2,
+  },
 ];
   
