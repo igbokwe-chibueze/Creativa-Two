@@ -41,7 +41,7 @@ const Navbar = () => {
   }, []);
     
   return (
-    <nav ref={navRef} className=" fixed top-0 right-0 left-0 z-30 px-4 lg:px-6 py-2.5 bg-skin-fill-secondary ">
+    <nav ref={navRef} className=" fixed top-0 right-0 left-0 z-30 px-4 lg:px-6 py-2.5 bg-skin-fill-secondary border-b border-skin-border ">
       <div className="flex flex-wrap justify-between items-center max-w-screen-xl mx-auto">
 
         {/* Logo */}
