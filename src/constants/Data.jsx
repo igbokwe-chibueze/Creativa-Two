@@ -140,42 +140,42 @@ export const teamMembersData = [
     position: "CEO",
     image: blackwoman2,
     email: "chisom.abiola@creativa.com",
-    tel: "+234 701 234 56780"
+    tel: "+234 701 2341 56780"
   },
   {
     name: "Fatima Okoye",
     position: "CTO",
     image: blackwoman,
     email: "fatima.okoye@creativa.com",
-    tel: "+234 701 234 56790"
+    tel: "+234 701 2341 56790"
   },
   {
     name: "Jean Martin",
     position: "CFO",
     image: whitewoman,
     email: "jean.martin@creativa.com",
-    tel: "+234 701 234 56800"
+    tel: "+234 701 2341 56800"
   },
   {
     name: "Li Tanaka",
     position: "Lead Developer",
     image: asianman,
     email: "li.tanaka@creativa.com",
-    tel: "+234 701 234 56810"
+    tel: "+234 701 2341 56810"
   },
   {
     name: "Aarav Ramasamy",
     position: "Project Manager",
     image: indianman,
     email: "aarav.ramasamy@creativa.com",
-    tel: "+234 701 234 56820"
+    tel: "+234 701 2341 56820"
   },
   {
     name: "Wanjiku Abdi",
     position: "UX Designer",
     image: blackman,
     email: "wanjiku.abdi@creativa.com",
-    tel: "+234 701 234 56830"
+    tel: "+234 701 2341 56830"
   },
 ];
 

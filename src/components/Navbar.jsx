@@ -73,7 +73,7 @@ const Navbar = () => {
           
           <NavLinks data={navLinks} toggleNavLinks={toggleNavLinks}/>
 
-          <div className="hidden lg:block ml-3">
+          <div className="hidden xl:block ml-3">
             <MoreLinks data={navLinks}/>
           </div>
 
