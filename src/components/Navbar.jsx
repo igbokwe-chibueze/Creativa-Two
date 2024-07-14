@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { creativaLogo } from "../assets/pngs";
 import ThemeSwitcher from "./ThemeSwitcher";
-import { MenuIcon } from "../constants/Icons";
+import { CloseIcon, MenuIcon } from "../constants/Icons";
 import { navLinks } from "../constants/Data";
 import NavLinks from "./NavLinks";
 import LangSelector from "./LangSelector";
@@ -64,7 +64,7 @@ const Navbar = () => {
             onClick={toggleNavLinks} 
             className="inline-flex lg:hidden items-center justify-center p-2 w-10 h-10 btn-menu "
           >
-            <MenuIcon/>
+            {showNavLinks ? <CloseIcon /> : <MenuIcon />}
           </button>
         </div>
 
@@ -73,11 +73,11 @@ const Navbar = () => {
           
           <NavLinks data={navLinks} toggleNavLinks={toggleNavLinks}/>
 
-          <div className="hidden xl:block ml-3">
+          <div className="hidden lg:block xl:hidden ml-3">
             <MoreLinks data={navLinks}/>
           </div>
 
-          <div className=" md:hidden space-x-3">
+          <div className=" md:hidden mt-2">
             <LangSelector/>
           </div>
         </div>

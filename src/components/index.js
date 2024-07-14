@@ -1,4 +1,5 @@
 import Carousel from "./Carousel";
+import Counter from "./Counter";
 import CustomBtn from "./CustomBtn";
 import LangSelector from "./LangSelector";
 import MoreLinks from "./MoreLinks";
@@ -12,5 +13,6 @@ export {
     Navbar,
     LangSelector,
     Carousel,
-    MoreLinks
+    MoreLinks,
+    Counter
 }

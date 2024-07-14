@@ -43,13 +43,7 @@ const ThemeSwitcher = () => {
         className="btn-menu"
         onClick={toggleTheme}
       >
-        {isDarkMode ? (
-            // Render the first path(sun) when toggle is true
-            <SunIcon />
-         ) : (
-            // Render the second path(moon) when toggle is false
-            <MoonIcon />
-        )}        
+        {isDarkMode ? <SunIcon /> : <MoonIcon />}
       </button>      
     </div>
   )

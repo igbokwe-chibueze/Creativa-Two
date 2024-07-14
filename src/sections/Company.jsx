@@ -1,3 +1,4 @@
+import { Counter } from "../components"
 
 const Company = () => {
   return (
@@ -16,15 +17,23 @@ const Company = () => {
 
             <div className=" sm:px-16 xl:px-48 grid grid-cols-2 md:grid-cols-3">
               <div>
-                <h2 className=" header-one ">73M+</h2>
+                <h2 className=" header-one ">
+                  <Counter initialValue={0} endValue={73} duration={800}/><span>M+</span>
+                </h2>
                 <p className=" paragraph-one ">developers</p>
               </div>
+
               <div>
-                <h2 className=" header-one ">1B+</h2>
+                <h2 className=" header-one ">
+                  <Counter initialValue={0} endValue={2} duration={1000}/><span>B</span>
+                </h2>
                 <p className=" paragraph-one ">contributors</p>
               </div>
+
               <div>
-                <h2 className=" header-one ">4M+</h2>
+                <h2 className=" header-one ">
+                  <Counter initialValue={0} endValue={4} duration={1000}/><span>M+</span>
+                </h2>
                 <p className=" paragraph-one ">organizations</p>
               </div>
 

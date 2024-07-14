@@ -156,6 +156,7 @@ const CTASection = () => {
                   label={'Get Started'}
                   textStyle={''}
                   borderStyle={"border-0"}
+                  focusStyle={"focus:ring-4 focus:ring-skin-focus2"}
                   disabled={false}
                 >
                   <ArrowRightIcon className = " ml-2 group-hover:translate-x-2 transition-transform duration-700 ease-in-out "/>
@@ -166,7 +167,7 @@ const CTASection = () => {
                   classProps={`group `}
                   label={'Speak to Sales'}
                   backgroundStyle={"bg-skin-fill-secondary hover:bg-skin-fill-tertiary"}
-                  focusStyle={"focus:ring-skin-focus"}
+                  focusStyle={"focus:ring-2 focus:ring-skin-focus"}
                   textStyle={'text-skin-main'}
                   disabled={false}
                 >

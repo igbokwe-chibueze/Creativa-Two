@@ -49,7 +49,7 @@ const LangSelector = () => {
                 backgroundStyle={"bg-transparent hover:bg-skin-fill-tertiary"}
                 textStyle={"font-medium text-skin-muted text-left"}
                 borderStyle={'border-0 sm:border'}
-                focusStyle={'focus:ring-0 md:focus:ring-4 focus:ring-skin-focus'}
+                focusStyle={'focus:ring-0 md:focus:ring-2 focus:ring-skin-focus'}
                 disabled={false}
                 onBtnClick={toggleDropdown}
             >
