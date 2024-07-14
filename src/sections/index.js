@@ -3,8 +3,8 @@ import Company from "./Company";
 import Features from "./Features";
 import FooterSection from "./FooterSection";
 import Hero from "./Hero";
+import Profile from "./Profile";
 import Testimonials from "./Testimonials";
-
 
 
 export {
@@ -14,6 +14,7 @@ export {
     Features,
     Testimonials,
     CTASection,
-    FooterSection
+    FooterSection,
+    Profile
 
 }

@@ -23,7 +23,7 @@ const Profile = () => {
                     <div
                         key={index}
                         className={`max-w-xl mx-auto group/item first:border-r-2 last:border-l-2 border-skin-border
-                            flex items-center p-4 text-left rounded-lg
+                            flex items-center p-2 sm:p-4 text-left rounded-lg
                             hover:bg-skin-fill-secondary transition-colors duration-700 ease-in-out 
                             ${ index % 2 === 0 ? "" : "flex-row-reverse text-right" }`
                         }
@@ -33,16 +33,17 @@ const Profile = () => {
                             alt={member.name}
                             className="w-20 h-20 rounded-full mx-4"
                         />
-                        <div>
-                            <h3 className="text-base lg:text-lg font-extrabold tracking-tight leading-none text-skin-main">{member.name}</h3>
+                        <div className="space-y-2">
+                            <h4 className="text-lg lg:text-xl font-extrabold tracking-tight leading-none text-skin-main">{member.name}</h4>
                             <p className="text-sm lg:text-base text-skin-muted">{member.position}</p>
-                            <p className="text-sm lg:text-base text-skin-muted">{member.email}</p>
+                            <p className=" hidden sm:flex text-lg lg:text-xl font-normal text-skin-muted">{member.email}</p>
                         </div>
-
+                        
                         {/* Call Button */}
                         <a 
                             href={`tel:${member.tel} `}
-                            className={`group/edit invisible hover:bg-skin-fill-tertiary group-hover/item:visible 
+                            className={`group/edit lg:invisible lg:group-hover/item:visible 
+                                bg-skin-fill-tertiary lg:bg-transparent hover:bg-skin-fill-tertiary
                                 flex justify-center items-center rounded-full p-2 space-x-2
                                 text-sm lg:text-base text-skin-muted2
                                 ${index % 2 === 0 ? "ml-4" : "mr-4"}`}

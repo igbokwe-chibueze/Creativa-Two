@@ -9,8 +9,9 @@ const NavLinks = ({ data, toggleNavLinks }) => {
     >
         {data.map((link, index) => (
             <li key={index}
-                className=" font-medium text-skin-icon dark:hover:text-skin-inverted lg:hover:text-skin-inverted2 rounded-lg
-                hover:bg-skin-fill-tertiary "
+                className={`font-medium text-skin-icon dark:hover:text-skin-inverted lg:hover:text-skin-inverted2 rounded-lg
+                hover:bg-skin-fill-tertiary
+                ${index >= data.length - 2 ? 'lg:hidden xl:block' : ''}`}
             >
                 <Link
                     to={link.href}

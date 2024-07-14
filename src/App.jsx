@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Navbar } from './components';
 import { CTASection, Company, Features, FooterSection, Hero, Testimonials } from './sections';
+import Profile from './sections/Profile';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
                   <Features/>
                   <Testimonials/>
                   <CTASection/>
+                  <Profile/>
                   <FooterSection/>
                 </section>
               </>

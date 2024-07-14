@@ -5,6 +5,7 @@ import { MenuIcon } from "../constants/Icons";
 import { navLinks } from "../constants/Data";
 import NavLinks from "./NavLinks";
 import LangSelector from "./LangSelector";
+import MoreLinks from "./MoreLinks";
 
 
 const Navbar = () => {
@@ -71,6 +72,10 @@ const Navbar = () => {
         <div className={`lg:flex justify-between items-center w-full mt-4 lg:mt-0 lg:w-auto lg:order-1 ${showNavLinks ? 'block' : 'hidden'}`}>
           
           <NavLinks data={navLinks} toggleNavLinks={toggleNavLinks}/>
+
+          <div className="hidden lg:block ml-3">
+            <MoreLinks data={navLinks}/>
+          </div>
 
           <div className=" md:hidden space-x-3">
             <LangSelector/>

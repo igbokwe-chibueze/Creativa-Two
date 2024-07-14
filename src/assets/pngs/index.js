@@ -12,6 +12,8 @@ import blackwoman2 from './headshot-blackwoman2.jpg'
 import blackman from './headshot-blackman.jpg'
 import whiteman from './headshot-whiteman.jpg'
 import whitewoman from './headshot-whitewoman.jpg'
+import asianman from './headshot-asianman.jpeg'
+import indianman from './headshot-indianman.jpeg'
 
 export {
     creativaLogo,
@@ -27,5 +29,7 @@ export {
     blackwoman,
     blackwoman2,
     whiteman,
-    whitewoman
+    whitewoman,
+    asianman,
+    indianman
 }
